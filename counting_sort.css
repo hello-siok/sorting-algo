@@ -1,0 +1,182 @@
+body {
+    /* background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+    background: white;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-size: medium;
+}
+
+.generate-array {
+    display: flex;
+    justify-content: right;
+}
+
+button {
+    margin: 10px 0 5px 0;
+}
+
+#index {
+    display: flex;
+    text-align: center;
+}
+
+#array-wrapper, #array-wrapper-d1, #array-wrapper-d2, #array-wrapper-d3 {
+    display: flex;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.arr-item, .arr-item-res, .original-item {
+    margin: 5px 5px 10px 5px;
+    padding: 5px;
+    border: 1px solid black;
+    height: 40px;
+    width:80px;
+    background-color: aliceblue;
+}
+
+.index-item {
+    color: black;
+    margin: -10px 5px -10px 5px;
+    padding: 5px;
+    width: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
+#final-text {
+    text-align: right;
+}
+
+.same {
+    color: orange;
+    font-weight: bold;
+}
+
+.active {
+    color: blue;
+    font-weight: bold;
+}
+
+/* NAV BAR */
+nav {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+
+}
+
+ul{
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+    font-weight: 600;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+li:hover{
+    background: black;
+    transition: background-color 0.3s ease;
+    
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+i {
+    font-size: 1.3em;
+    padding-right: 5px;
+}
+
+header {
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+header i {
+    font-size: 5em;
+    color: black;
+}
+
+/* NAV BAR */
+nav {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+
+}
+
+ul{
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+    font-weight: 600;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+li:hover{
+    background: black;
+    transition: background-color 0.3s ease;
+    
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+i {
+    font-size: 1.3em;
+    padding-right: 5px;
+}
+
+header {
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+header i {
+    font-size: 5em;
+    color: black;
+}

@@ -1,0 +1,110 @@
+body {
+    /* background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+    background: white;
+    padding: 50px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.generate-array {
+    display: flex;
+    justify-content: right;
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: medium;
+}
+
+hr {
+    line-height: 0.2;
+}
+
+button {
+    margin: 10px 0 10px 0;
+}
+
+#array-wrapper, #array-wrapper-d1, #array-wrapper-d2, #array-wrapper-d3 {
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.arr-item, .arr-item-res {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    height: 40px;
+    width:80px;
+    background-color: aliceblue;
+}
+
+.hidden {
+    display: none;
+}
+
+#final-text {
+    text-align: right;
+}
+
+/* NAV BAR */
+nav {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+
+}
+
+ul{
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+    font-weight: 600;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+li:hover{
+    background: black;
+    transition: background-color 0.3s ease;
+    
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+i {
+    font-size: 1.3em;
+    padding-right: 5px;
+}
+
+header {
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+header i {
+    font-size: 5em;
+    color: black;
+}

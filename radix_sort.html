@@ -1,0 +1,143 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radix Sort Algorithm </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+  <link rel="icon" href="https://static-00.iconduck.com/assets.00/sort-emoji-2048x1561-2bljcam3.png" type="image/x-icon">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link href="{% static '/css/radix_sort.css'%}" rel="stylesheet" type="text/css">
+  
+
+</head>
+
+<body>
+    <nav>
+        <div class="menu">
+            <header>
+                <i class='bx bx-sleepy'></i>
+            </header>
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:8000/sorting/">
+                        <i class='bx bxs-balloon'></i>
+                        <p>Bubble Sort</p>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="http://127.0.0.1:8000/sorting/">
+                        <i class='bx bx-merge' ></i>
+                        <p>Merge Sort</p>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="http://127.0.0.1:8000/sorting/">
+                        <i class='bx bx-border-right'></i>
+                        <p>Heap Sort</p>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="http://127.0.0.1:8000/sorting/">
+                        <i class='bx bx-rocket' ></i>
+                        <p>Quick Sort</p>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="http://127.0.0.1:8000/sorting/">
+                        <i class='bx bx-expand-horizontal'></i>
+                        <p>Insertion Sort</p>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="http://127.0.0.1:8000/sorting/">
+                        <i class='bx bxs-share' ></i>
+                        <p>Selection Sort</p>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="http://127.0.0.1:8000/sorting/radix/">
+                        <i class='bx bx-planet' ></i>
+                        <p>Radix Sort</p>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="http://127.0.0.1:8000/sorting/counting/">
+                        <i class='bx bx-coffee'></i>
+                        <p>Counting Sort</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div id="wrapper">
+    <h1>Radix Sort Algorithm</h1>
+    <div class="generate-array"><button class="btn btn-warning" onclick="generate_array(10)">> Generate New Array < </button></div>
+
+    <h3>Your array </h3><hr>
+    <div id="array-wrapper"> </div>
+
+    <div class="generate-array"><button class="btn btn-dark" onclick="radix_sort()"> > Start Sort < </button></div>
+    
+    <h3>Step 1: Sort by 1st digit</h3><hr>
+    <div id="array-wrapper-d1">
+        <div class="arr-item-res" id="arr-item-1-0"></div>
+        <div class="arr-item-res" id="arr-item-1-1"></div>
+        <div class="arr-item-res" id="arr-item-1-2"></div>
+        <div class="arr-item-res" id="arr-item-1-3"></div>
+        <div class="arr-item-res" id="arr-item-1-4"></div>
+        <div class="arr-item-res" id="arr-item-1-5"></div>
+        <div class="arr-item-res" id="arr-item-1-6"></div>
+        <div class="arr-item-res" id="arr-item-1-7"></div>
+        <div class="arr-item-res" id="arr-item-1-8"></div>
+        <div class="arr-item-res" id="arr-item-1-9"></div>
+    </div>
+
+    <h3>Step 2: Sort by 2nd digit</h3><hr>
+    <div id="array-wrapper-d2">
+        <div class="arr-item-res" id="arr-item-10-0"></div>
+        <div class="arr-item-res" id="arr-item-10-1"></div>
+        <div class="arr-item-res" id="arr-item-10-2"></div>
+        <div class="arr-item-res" id="arr-item-10-3"></div>
+        <div class="arr-item-res" id="arr-item-10-4"></div>
+        <div class="arr-item-res" id="arr-item-10-5"></div>
+        <div class="arr-item-res" id="arr-item-10-6"></div>
+        <div class="arr-item-res" id="arr-item-10-7"></div>
+        <div class="arr-item-res" id="arr-item-10-8"></div>
+        <div class="arr-item-res" id="arr-item-10-9"></div>
+    </div>
+        
+    <h3>Step 3: Sort by 3rd digit</h3><hr>
+    <div id="array-wrapper-d3">
+        <div class="arr-item-res" id="arr-item-100-0"></div>
+        <div class="arr-item-res" id="arr-item-100-1"></div>
+        <div class="arr-item-res" id="arr-item-100-2"></div>
+        <div class="arr-item-res" id="arr-item-100-3"></div>
+        <div class="arr-item-res" id="arr-item-100-4"></div>
+        <div class="arr-item-res" id="arr-item-100-5"></div>
+        <div class="arr-item-res" id="arr-item-100-6"></div>
+        <div class="arr-item-res" id="arr-item-100-7"></div>
+        <div class="arr-item-res" id="arr-item-100-8"></div>
+        <div class="arr-item-res" id="arr-item-100-9"></div>
+    </div>
+
+    <div style="height:20px"><h3 class="hidden" id="final-text">&#129395&#129395&#129395 Done Sorting &#129395&#129395&#129395</h3></div>
+
+</div>
+    
+<script src="{% static '/js/radix_sort.js'%}"></script>
+</body>
